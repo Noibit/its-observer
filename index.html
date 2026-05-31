@@ -38,8 +38,11 @@
     background:radial-gradient(circle at 30% 30%,rgba(33,230,193,.18),transparent 70%)}
   .logo-slot svg{width:22px;height:22px}
   .logo-tag{font:600 9px/1 var(--mono);letter-spacing:.18em;color:var(--txt-dim);position:absolute;bottom:-15px;left:0;white-space:nowrap}
+  .brand .name{display:flex;align-items:center}
   .brand b{font-weight:800;letter-spacing:.02em;font-size:19px}
-  .brand .by{font:500 11px/1 var(--mono);color:var(--txt-dim);letter-spacing:.12em;margin-left:4px}
+  .brand .by{font:500 11px/1 var(--mono);color:var(--txt-dim);letter-spacing:.1em;margin-left:8px}
+  .brand .divider{width:1px;height:18px;background:var(--line-2);margin:0 12px}
+  .brand .brandmark{height:19px;width:auto;display:block;opacity:.95}
   .cta-sm{font:600 13px/1 var(--sans);color:var(--bg);background:var(--cyan);padding:11px 18px;border-radius:8px;text-decoration:none;transition:.2s}
   .cta-sm:hover{background:#fff;box-shadow:0 0 24px rgba(33,230,193,.4)}
 
@@ -120,9 +123,9 @@
 
   footer{border-top:1px solid var(--line);margin-top:90px;padding:40px 0}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .foot-brand{display:flex;align-items:center;gap:12px;color:var(--txt-dim);font:500 13px/1 var(--mono)}
+  .foot-brand{display:flex;align-items:baseline;gap:9px;color:var(--txt-dim);font:500 13px/1 var(--mono)}
   .co-logo{width:30px;height:30px;border:1px dashed var(--line-2);border-radius:7px;display:grid;place-items:center;color:var(--txt-dim);font:700 10px/1 var(--mono)}
-  .noibit-n{height:26px;width:auto;display:block;opacity:.95}
+  .noibit-word{height:13px;width:auto;display:block;opacity:.95}
   .foot small{color:var(--txt-dim);font:500 12px/1.6 var(--mono);letter-spacing:.06em}
 
   @media(max-width:820px){.grid3{grid-template-columns:1fr}.shot-row{grid-template-columns:1fr}}
@@ -154,8 +157,11 @@
     .foot{flex-direction:column;align-items:flex-start;gap:16px}
   }
   @media(max-width:400px){
-    .brand .by{display:none}
     h1{font-size:30px}
+    .brand b{font-size:17px}
+    .brand .brandmark{height:16px}
+    .brand .divider{margin:0 9px}
+    .cta-sm{padding:9px 12px;font-size:11px}
   }
   .rise{opacity:0;transform:translateY(22px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
@@ -169,7 +175,7 @@
       <div class="logo-slot" title="Observer logo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/></svg>
       </div>
-      <span><b>OBSERVER</b><span class="by">// by Noibit</span></span>
+      <span class="name"><b>OBSERVER</b><span class="divider"></span><img class="brandmark" src="by-noibit.svg" alt="by Noibit" /></span>
     </div>
     <a href="#contact" class="cta-sm">Get in touch</a>
   </div>
@@ -263,8 +269,8 @@
 <footer>
   <div class="wrap foot">
     <div class="foot-brand">
-      <img class="noibit-n" src="noibit-n.png" alt="Noibit" />
-      <span>Observer is a product of <b style="color:var(--txt);font-weight:600">Noibit</b></span>
+      <span>Observer is a product of</span>
+      <img class="noibit-word" src="noibit-word.svg" alt="Noibit" />
     </div>
     <small>© 2026 Noibit · info@noibit.com</small>
   </div>
